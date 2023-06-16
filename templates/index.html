@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bicep Curl Detection</title>
+    <style>
+        #video-container {
+            margin-bottom: 20px;
+        }
+        
+        #predictions {
+            margin-top: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        h2 {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bicep Curl Detection</h1>
+    
+    <div id="video-container">
+        <img src="{{ url_for('video_feed') }}" width="640" height="480" />
+    </div>
+    
+    <div id="predictions">
+        <h2>Prediction:</h2>
+        <p id="prediction-label">-</p>
+        
+        <h2>Probability:</h2>
+        <p id="prediction-probability">-</p>
+        
+        <h2>Left Count:</h2>
+        <p id="left-counter">-</p>
+        
+        <h2>Right Count:</h2>
+        <p id="right-counter">-</p>
+        
+        <h2>Upper Hand Pose:</h2>
+        <p id="upper-hand-pose">-</p>
+    </div>
+    
+    <script>
+        // JavaScript code for updating the prediction and other values goes here
+        
+        // Example code to update the values
+        document.getElementById("prediction-label").innerText = "Bicep Curl";
+        document.getElementById("prediction-probability").innerText = "0.85";
+        document.getElementById("left-counter").innerText = "5";
+        document.getElementById("right-counter").innerText = "3";
+        document.getElementById("upper-hand-pose").innerText = "Supinated";
+    </script>
+</body>
+</html>
