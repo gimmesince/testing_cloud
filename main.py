@@ -1,5 +1,6 @@
 from flask import Flask,render_template,Response
 import cv2
+import os
 import mediapipe as mp
 import numpy as np
 import pandas as pd
@@ -292,7 +293,7 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 3000)))
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
 
 
 
