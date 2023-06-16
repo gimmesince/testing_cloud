@@ -1,7 +1,9 @@
 Flask
 opencv-python
 mediapipe
+matplotlib
 numpy
 pandas
 pickles
 keras-models
+tensorflow
