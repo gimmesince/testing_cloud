@@ -28,7 +28,7 @@ storage_client = storage.Client()
 
 app=Flask(__name__)
 
-fil=r'C:\Users\Ryan\Documents\learnpython\deepfit\Exercise-Correction\demo\bc_demo.mp4'
+fil='bc_demo.mp4'
 
 
 
@@ -71,10 +71,10 @@ def video():
 
 
         # Load input scaler
-        with open(r"C:\Users\Ryan\Documents\learnpython\39\bicep_curl\model\input_scaler.pkl", "rb") as f:
+        with open("input_scaler.pkl", "rb") as f:
             input_scaler = pickle.load(f)
 
-        DL_model = load_model(r'C:\Users\Ryan\Documents\learnpython\39\bicep_curl\model\savedmodel')
+        DL_model = load_model('savedmodel')
 
         mp_drawing = mp.solutions.drawing_utils
         mp_pose = mp.solutions.pose
@@ -140,7 +140,7 @@ def video():
 
         with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as pose:
             while True:
-                frame = stream.read(1024)
+                frame = stream.read()
                 if not frame:
                     break
                 else:
